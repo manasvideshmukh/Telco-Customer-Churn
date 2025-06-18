@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: src
+Version: 0.0.1
+Summary: Telco Churn Prediction - ML Project with MLOps workflow
+Home-page: https://github.com/manasvideshmukh/Telco-Customer-Churn
+Author: manasvideshmukh
+Author-email: manasvideshmukh3@gmail.com
+Project-URL: Bug Tracker, https://github.com/manasvideshmukh/Telco-Customer-Churn/issues
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
+
+# Telco Customer Churn Prediction

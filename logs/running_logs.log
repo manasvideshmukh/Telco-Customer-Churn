@@ -1,0 +1,45 @@
+[2025-06-18 11:18:28,476: INFO: test_log: Logger test successful]
+[2025-06-18 12:42:18,263: INFO: data_ingestion: Train shape: (5634, 21), Test shape: (1409, 21)]
+[2025-06-18 15:55:04,530: INFO: data_ingestion: Train shape: (5634, 21), Test shape: (1409, 21)]
+[2025-06-18 15:55:04,530: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2025-06-18 15:55:05,030: ERROR: data_transformation_pipeline: Cannot save file into a non-existent directory: 'artifacts\data_transformation']
+Traceback (most recent call last):
+  File "C:\telco churn project\src\pipeline\data_transformation_pipeline.py", line 15, in start_data_transformation
+    data_transformation.initiate_data_transformation()
+  File "C:\telco churn project\src\components\data_transformation.py", line 48, in initiate_data_transformation
+    pd.DataFrame(X_train_transformed).to_csv(self.config.transformed_train_path, index=False)
+  File "C:\telco churn project\venv\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\telco churn project\venv\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\telco churn project\venv\Lib\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "C:\telco churn project\venv\Lib\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\telco churn project\venv\Lib\site-packages\pandas\io\common.py", line 749, in get_handle
+    check_parent_directory(str(handle))
+  File "C:\telco churn project\venv\Lib\site-packages\pandas\io\common.py", line 616, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: 'artifacts\data_transformation'
+[2025-06-18 15:58:39,345: INFO: data_ingestion: Train shape: (5634, 21), Test shape: (1409, 21)]
+[2025-06-18 15:58:39,345: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2025-06-18 15:58:58,309: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage completed <<<<<<
+
+]
+[2025-06-18 17:13:11,279: INFO: data_ingestion: Train shape: (5634, 21), Test shape: (1409, 21)]
+[2025-06-18 17:13:11,280: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2025-06-18 17:13:33,623: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage completed <<<<<<
+
+]
+[2025-06-18 17:13:33,623: INFO: data_validation_pipeline: >>>>> Data Validation Started <<<<<]
+[2025-06-18 17:13:33,660: INFO: data_validation_pipeline: >>>>> Data Validation Completed <<<<<]
+[2025-06-18 17:21:51,088: INFO: data_ingestion: Train shape: (5634, 21), Test shape: (1409, 21)]
+[2025-06-18 17:21:51,090: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2025-06-18 17:22:12,574: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage completed <<<<<<
+
+]
+[2025-06-18 17:22:12,581: INFO: data_validation_pipeline: >>>>> Data Validation Started <<<<<]
+[2025-06-18 17:22:12,612: INFO: data_validation_pipeline: >>>>> Data Validation Completed <<<<<]

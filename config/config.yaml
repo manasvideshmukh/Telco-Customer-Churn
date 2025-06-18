@@ -1,0 +1,26 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_file: data/WA_Fn-UseC_-Telco-Customer-Churn.csv
+  raw_data: artifacts/data_ingestion/raw.csv
+  train_data: artifacts/data_ingestion/train.csv
+  test_data: artifacts/data_ingestion/test.csv
+  test_size: 0.2
+  random_state: 42
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  train_data_path: artifacts/data_ingestion/train.csv
+  test_data_path: artifacts/data_ingestion/test.csv
+  transformed_train_path: artifacts/data_transformation/train_transformed.csv
+  transformed_test_path: artifacts/data_transformation/test_transformed.csv
+  transformer_object_path: artifacts/data_transformation/transformer.pkl
+
+
+data_validation:
+  root_dir: artifacts/data_validation
+  status_file: artifacts/data_validation/status.txt
+  schema_file: schema.yaml
+  data_file: artifacts/data_ingestion/train.csv  # or raw.csv if you prefer
+

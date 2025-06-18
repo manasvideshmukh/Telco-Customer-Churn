@@ -1,0 +1,9 @@
+pandas              # Data loading, cleaning, and manipulation
+numpy               # Numerical operations and array handling
+scikit-learn        # Model training, preprocessing, and evaluation
+xgboost             # Powerful gradient boosting model for classification
+mlflow              # Experiment tracking, model logging, and versioning
+shap                # Model explainability (feature importance using SHAP values)
+evidently           # Data and concept drift detection, monitoring reports
+matplotlib          # Plotting graphs and visualizations
+seaborn             # Statistical data visualization (built on top of matplotlib)
