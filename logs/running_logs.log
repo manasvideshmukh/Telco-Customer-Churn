@@ -43,3 +43,17 @@ OSError: Cannot save file into a non-existent directory: 'artifacts\data_transfo
 ]
 [2025-06-18 17:22:12,581: INFO: data_validation_pipeline: >>>>> Data Validation Started <<<<<]
 [2025-06-18 17:22:12,612: INFO: data_validation_pipeline: >>>>> Data Validation Completed <<<<<]
+[2025-06-20 12:10:45,895: INFO: data_ingestion: Train shape: (5634, 21), Test shape: (1409, 21)]
+[2025-06-20 12:10:45,895: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2025-06-20 12:10:57,029: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage completed <<<<<<
+
+]
+[2025-06-20 12:10:57,029: INFO: data_validation_pipeline: >>>>> Data Validation Started <<<<<]
+[2025-06-20 12:10:57,049: INFO: data_validation_pipeline: >>>>> Data Validation Completed <<<<<]
+[2025-06-20 12:16:20,220: INFO: data_ingestion: Train shape: (5634, 21), Test shape: (1409, 21)]
+[2025-06-20 12:16:20,220: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2025-06-20 12:16:20,359: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage completed <<<<<<
+
+]
+[2025-06-20 12:16:20,359: INFO: data_validation_pipeline: >>>>> Data Validation Started <<<<<]
+[2025-06-20 12:16:20,374: INFO: data_validation_pipeline: >>>>> Data Validation Completed <<<<<]
