@@ -1,0 +1,17 @@
+model_trainer:
+  logistic_regression:
+    solver: liblinear
+    C: 1.0
+    max_iter: 100
+
+  xgboost:
+    n_estimators: 100
+    max_depth: 3
+    learning_rate: 0.1
+    objective: binary:logistic
+    eval_metric: logloss
+
+  random_forest:
+    n_estimators: 100
+    max_depth: 10
+    random_state: 42

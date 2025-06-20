@@ -1,0 +1,10 @@
+artifact_location: file:///C:/telco%20churn%20project/mlruns/618530715303033719/models/m-1ce07c7d0226422e88715b41740208c4/artifacts
+creation_timestamp: 1750413988551
+experiment_id: '618530715303033719'
+last_updated_timestamp: 1750413992288
+model_id: m-1ce07c7d0226422e88715b41740208c4
+model_type: null
+name: RandomForest
+source_run_id: f71e4c49da20438887a5acf76fcb7446
+status: 2
+status_message: null

@@ -1,0 +1,10 @@
+artifact_location: file:///C:/telco%20churn%20project/mlruns/618530715303033719/models/m-aecab0ca16b24c659b60b9efa8942384/artifacts
+creation_timestamp: 1750413603841
+experiment_id: '618530715303033719'
+last_updated_timestamp: 1750413609299
+model_id: m-aecab0ca16b24c659b60b9efa8942384
+model_type: null
+name: LogisticRegression
+source_run_id: 8d774802e4e44127b3428a0ea99b5861
+status: 2
+status_message: null

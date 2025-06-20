@@ -17,10 +17,37 @@ data_transformation:
   transformed_test_path: artifacts/data_transformation/test_transformed.csv
   transformer_object_path: artifacts/data_transformation/transformer.pkl
 
-
 data_validation:
   root_dir: artifacts/data_validation
   status_file: artifacts/data_validation/status.txt
   schema_file: schema.yaml
-  data_file: artifacts/data_ingestion/train.csv  # or raw.csv if you prefer
+  data_file: artifacts/data_ingestion/train.csv
 
+model_trainer:
+  root_dir: artifacts/model_trainer
+  transformed_train_path: artifacts/data_transformation/train_transformed.csv
+  transformed_test_path: artifacts/data_transformation/test_transformed.csv
+  model_path: artifacts/model_trainer/model.pkl
+  target_column: Churn
+
+  # ✅ These two were missing
+  train_data_path: artifacts/data_ingestion/train.csv
+  test_data_path: artifacts/data_ingestion/test.csv
+
+  logistic_regression:
+    penalty: "l2"
+    C: 1.0
+    solver: "liblinear"
+    max_iter: 1000
+
+  random_forest:
+    n_estimators: 100
+    max_depth: 10
+    random_state: 42
+
+  xgboost:
+    learning_rate: 0.1
+    n_estimators: 100
+    max_depth: 5
+    objective: "binary:logistic"
+    eval_metric: "logloss"

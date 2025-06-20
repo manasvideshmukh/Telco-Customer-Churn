@@ -57,3 +57,170 @@ OSError: Cannot save file into a non-existent directory: 'artifacts\data_transfo
 ]
 [2025-06-20 12:16:20,359: INFO: data_validation_pipeline: >>>>> Data Validation Started <<<<<]
 [2025-06-20 12:16:20,374: INFO: data_validation_pipeline: >>>>> Data Validation Completed <<<<<]
+[2025-06-20 15:07:38,988: INFO: data_ingestion: Train shape: (5634, 21), Test shape: (1409, 21)]
+[2025-06-20 15:07:38,992: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2025-06-20 15:07:39,266: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage completed <<<<<<
+
+]
+[2025-06-20 15:07:39,267: INFO: data_validation_pipeline: >>>>> Data Validation Started <<<<<]
+[2025-06-20 15:07:39,316: INFO: data_validation_pipeline: >>>>> Data Validation Completed <<<<<]
+[2025-06-20 15:07:39,316: INFO: model_trainer_pipeline: >>>>> Model Training Stage started <<<<<]
+[2025-06-20 15:07:39,317: ERROR: model_trainer_pipeline: 'logistic_regression']
+Traceback (most recent call last):
+  File "C:\telco churn project\src\pipeline\model_trainer_pipeline.py", line 9, in start_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\telco churn project\src\config\configuration.py", line 54, in get_model_trainer_config
+    logistic_regression=config["logistic_regression"],
+                        ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'logistic_regression'
+[2025-06-20 15:09:10,174: INFO: data_ingestion: Train shape: (5634, 21), Test shape: (1409, 21)]
+[2025-06-20 15:09:10,178: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2025-06-20 15:09:10,559: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage completed <<<<<<
+
+]
+[2025-06-20 15:09:10,567: INFO: data_validation_pipeline: >>>>> Data Validation Started <<<<<]
+[2025-06-20 15:09:10,602: INFO: data_validation_pipeline: >>>>> Data Validation Completed <<<<<]
+[2025-06-20 15:09:10,602: INFO: model_trainer_pipeline: >>>>> Model Training Stage started <<<<<]
+[2025-06-20 15:09:10,607: ERROR: model_trainer_pipeline: 'ModelTrainer' object has no attribute 'train_and_log_models']
+Traceback (most recent call last):
+  File "C:\telco churn project\src\pipeline\model_trainer_pipeline.py", line 11, in start_model_trainer
+    model_trainer.train_and_log_models()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ModelTrainer' object has no attribute 'train_and_log_models'
+[2025-06-20 15:11:24,867: INFO: data_ingestion: Train shape: (5634, 21), Test shape: (1409, 21)]
+[2025-06-20 15:11:24,867: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2025-06-20 15:11:25,135: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage completed <<<<<<
+
+]
+[2025-06-20 15:11:25,137: INFO: data_validation_pipeline: >>>>> Data Validation Started <<<<<]
+[2025-06-20 15:11:25,157: INFO: data_validation_pipeline: >>>>> Data Validation Completed <<<<<]
+[2025-06-20 15:11:25,157: INFO: model_trainer_pipeline: >>>>> Model Training Stage started <<<<<]
+[2025-06-20 15:11:25,157: ERROR: model_trainer_pipeline: 'ModelTrainerConfig' object has no attribute 'transformed_train_path']
+Traceback (most recent call last):
+  File "C:\telco churn project\src\pipeline\model_trainer_pipeline.py", line 11, in start_model_trainer
+    model_trainer.train_and_log_models()
+  File "C:\telco churn project\src\components\model_trainer.py", line 19, in train_and_log_models
+    X_train = pd.read_csv(self.config.transformed_train_path)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ModelTrainerConfig' object has no attribute 'transformed_train_path'
+[2025-06-20 15:16:47,402: INFO: data_ingestion: Train shape: (5634, 21), Test shape: (1409, 21)]
+[2025-06-20 15:16:47,402: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2025-06-20 15:16:47,667: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage completed <<<<<<
+
+]
+[2025-06-20 15:16:47,679: INFO: data_validation_pipeline: >>>>> Data Validation Started <<<<<]
+[2025-06-20 15:16:47,697: INFO: data_validation_pipeline: >>>>> Data Validation Completed <<<<<]
+[2025-06-20 15:16:47,697: INFO: model_trainer_pipeline: >>>>> Model Training Stage started <<<<<]
+[2025-06-20 15:16:47,737: ERROR: model_trainer_pipeline: 'Churn']
+Traceback (most recent call last):
+  File "C:\telco churn project\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Churn'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\telco churn project\src\pipeline\model_trainer_pipeline.py", line 11, in start_model_trainer
+    model_trainer.train_and_log_models()
+  File "C:\telco churn project\src\components\model_trainer.py", line 22, in train_and_log_models
+    y_train = X_train[self.config.target_column]
+              ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\telco churn project\venv\Lib\site-packages\pandas\core\frame.py", line 4107, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\telco churn project\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Churn'
+[2025-06-20 15:20:35,207: INFO: data_ingestion: Train shape: (5634, 21), Test shape: (1409, 21)]
+[2025-06-20 15:20:35,210: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2025-06-20 15:20:35,477: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage completed <<<<<<
+
+]
+[2025-06-20 15:20:35,477: INFO: data_validation_pipeline: >>>>> Data Validation Started <<<<<]
+[2025-06-20 15:20:35,507: INFO: data_validation_pipeline: >>>>> Data Validation Completed <<<<<]
+[2025-06-20 15:20:35,507: INFO: model_trainer_pipeline: >>>>> Model Training Stage started <<<<<]
+[2025-06-20 15:20:35,547: ERROR: model_trainer_pipeline: 'ModelTrainerConfig' object has no attribute 'train_data_path']
+Traceback (most recent call last):
+  File "C:\telco churn project\src\pipeline\model_trainer_pipeline.py", line 11, in start_model_trainer
+    model_trainer.train_and_log_models()
+  File "C:\telco churn project\src\components\model_trainer.py", line 23, in train_and_log_models
+    y_train = pd.read_csv(self.config.train_data_path)[self.config.target_column]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ModelTrainerConfig' object has no attribute 'train_data_path'
+[2025-06-20 15:22:32,263: INFO: data_ingestion: Train shape: (5634, 21), Test shape: (1409, 21)]
+[2025-06-20 15:22:32,268: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2025-06-20 15:22:32,567: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage completed <<<<<<
+
+]
+[2025-06-20 15:22:32,572: INFO: data_validation_pipeline: >>>>> Data Validation Started <<<<<]
+[2025-06-20 15:22:32,597: INFO: data_validation_pipeline: >>>>> Data Validation Completed <<<<<]
+[2025-06-20 15:22:32,597: INFO: model_trainer_pipeline: >>>>> Model Training Stage started <<<<<]
+[2025-06-20 15:22:32,602: ERROR: model_trainer_pipeline: ModelTrainerConfig.__init__() missing 2 required positional arguments: 'train_data_path' and 'test_data_path']
+Traceback (most recent call last):
+  File "C:\telco churn project\src\pipeline\model_trainer_pipeline.py", line 9, in start_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\telco churn project\src\config\configuration.py", line 50, in get_model_trainer_config
+    return ModelTrainerConfig(
+           ^^^^^^^^^^^^^^^^^^^
+TypeError: ModelTrainerConfig.__init__() missing 2 required positional arguments: 'train_data_path' and 'test_data_path'
+[2025-06-20 15:26:56,491: INFO: data_ingestion: Train shape: (5634, 21), Test shape: (1409, 21)]
+[2025-06-20 15:26:56,497: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2025-06-20 15:26:56,786: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage completed <<<<<<
+
+]
+[2025-06-20 15:26:56,787: INFO: data_validation_pipeline: >>>>> Data Validation Started <<<<<]
+[2025-06-20 15:26:56,807: INFO: data_validation_pipeline: >>>>> Data Validation Completed <<<<<]
+[2025-06-20 15:26:56,807: INFO: model_trainer_pipeline: >>>>> Model Training Stage started <<<<<]
+[2025-06-20 15:30:01,967: INFO: data_ingestion: Train shape: (5634, 21), Test shape: (1409, 21)]
+[2025-06-20 15:30:01,973: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2025-06-20 15:30:02,577: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage completed <<<<<<
+
+]
+[2025-06-20 15:30:02,587: INFO: data_validation_pipeline: >>>>> Data Validation Started <<<<<]
+[2025-06-20 15:30:02,619: INFO: data_validation_pipeline: >>>>> Data Validation Completed <<<<<]
+[2025-06-20 15:30:02,619: INFO: model_trainer_pipeline: >>>>> Model Training Stage started <<<<<]
+[2025-06-20 15:30:09,347: ERROR: model_trainer_pipeline: '1']
+Traceback (most recent call last):
+  File "C:\telco churn project\src\pipeline\model_trainer_pipeline.py", line 11, in start_model_trainer
+    model_trainer.train_and_log_models()
+  File "C:\telco churn project\src\components\model_trainer.py", line 50, in train_and_log_models
+    "precision": report["1"]["precision"],
+                 ~~~~~~^^^^^
+KeyError: '1'
+[2025-06-20 15:36:21,533: INFO: data_ingestion: Train shape: (5634, 21), Test shape: (1409, 21)]
+[2025-06-20 15:36:21,533: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2025-06-20 15:36:21,768: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage completed <<<<<<
+
+]
+[2025-06-20 15:36:21,784: INFO: data_validation_pipeline: >>>>> Data Validation Started <<<<<]
+[2025-06-20 15:36:21,816: INFO: data_validation_pipeline: >>>>> Data Validation Completed <<<<<]
+[2025-06-20 15:36:21,816: INFO: model_trainer_pipeline: >>>>> Model Training Stage started <<<<<]
+[2025-06-20 15:36:32,492: ERROR: model_trainer_pipeline: Invalid classes inferred from unique values of `y`.  Expected: [0 1], got ['No' 'Yes']]
+Traceback (most recent call last):
+  File "C:\telco churn project\src\pipeline\model_trainer_pipeline.py", line 11, in start_model_trainer
+    model_trainer.train_and_log_models()
+  File "C:\telco churn project\src\components\model_trainer.py", line 39, in train_and_log_models
+    model.fit(X_train, y_train)
+  File "C:\telco churn project\venv\Lib\site-packages\xgboost\core.py", line 729, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "C:\telco churn project\venv\Lib\site-packages\xgboost\sklearn.py", line 1640, in fit
+    raise ValueError(
+ValueError: Invalid classes inferred from unique values of `y`.  Expected: [0 1], got ['No' 'Yes']
+[2025-06-20 15:41:51,339: INFO: data_ingestion: Train shape: (5634, 21), Test shape: (1409, 21)]
+[2025-06-20 15:41:51,354: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2025-06-20 15:41:51,653: INFO: data_transformation_pipeline: >>>>>> Data Transformation Stage completed <<<<<<
+
+]
+[2025-06-20 15:41:51,653: INFO: data_validation_pipeline: >>>>> Data Validation Started <<<<<]
+[2025-06-20 15:41:51,700: INFO: data_validation_pipeline: >>>>> Data Validation Completed <<<<<]
+[2025-06-20 15:41:51,700: INFO: model_trainer_pipeline: >>>>> Model Training Stage started <<<<<]
+[2025-06-20 15:42:06,022: INFO: model_trainer_pipeline: >>>>> Model Training Stage completed <<<<<
+]

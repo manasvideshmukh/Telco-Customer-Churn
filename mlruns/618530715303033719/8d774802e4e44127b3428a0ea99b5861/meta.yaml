@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/telco%20churn%20project/mlruns/618530715303033719/8d774802e4e44127b3428a0ea99b5861/artifacts
+end_time: 1750413609347
+entry_point_name: ''
+experiment_id: '618530715303033719'
+lifecycle_stage: active
+run_id: 8d774802e4e44127b3428a0ea99b5861
+run_name: LogisticRegression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750413603747
+status: 4
+tags: []
+user_id: Lenovo
